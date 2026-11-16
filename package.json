@@ -1,0 +1,22 @@
+{
+  "name": "tokenwise-monorepo",
+  "version": "1.0.0",
+  "description": "TokenWise — Developer-first LLM Observability & Gateway Platform inspired by Helicone",
+  "scripts": {
+    "dev:api": "cd apps/api && ./venv/bin/uvicorn app.main:app --reload --port 8000",
+    "dev:web": "npm --prefix apps/web run dev",
+    "test:api": "cd apps/api && ./venv/bin/pytest -v",
+    "seed": "cd apps/api && PYTHONPATH=. ./venv/bin/python scripts/seed_demo_data.py",
+    "build:web": "npm --prefix apps/web run build"
+  },
+  "keywords": [
+    "llm",
+    "observability",
+    "ai",
+    "helicone",
+    "monitoring",
+    "gateway"
+  ],
+  "author": "TokenWise Team",
+  "license": "MIT"
+}
