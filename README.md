@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TokenWise — LLM Observability & Gateway Platform
 
 TokenWise is a developer-first LLM Observability, Metrics, and Proxy Gateway platform inspired by the core capabilities of **Helicone**. It enables engineering teams to integrate, monitor, debug, analyze, and optimize their LLM-powered applications through a unified, high-performance dashboard and API gateway.
@@ -192,3 +193,7 @@ cd apps/api
 ```
 
 All 8 test suites pass with 100% test coverage for the core vertical slice.
+=======
+# TokenWise
+Your personel AI and token manager 
+>>>>>>> origin/main
