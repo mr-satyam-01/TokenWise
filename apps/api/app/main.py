@@ -89,14 +89,20 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+
 # CORS Middleware
 origins = [
+    # Local development
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://localhost:3001",
     "http://127.0.0.1:3001",
     "http://localhost:8000",
+
+    # Production frontend (Vercel)
+    "https://tokenwise-three.vercel.app",
 ]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -105,7 +111,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 @app.get("/health", tags=["Health"])
 async def health_check(db: AsyncSession = Depends(get_db)):
